@@ -7,7 +7,7 @@
 
   // Mensajes precargados según desde dónde escriben
   var MENSAJES = {
-    general: "¡Hola! Quiero información sobre Espacio Baume.",
+    general: "¡Hola! Quiero conocer la disponibilidad del Espacio Baume.",
     profesional: "¡Hola! Soy profesional de la salud y quiero información sobre los consultorios de Espacio Baume.",
     comunidad: "¡Hola! Quiero enterarme de las actividades y talleres de Espacio Baume.",
     tallerista: "¡Hola! Quiero proponer un taller o actividad en Espacio Baume.",
