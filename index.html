@@ -1,12 +1,237 @@
 <!DOCTYPE html>
-  <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacio Baume</title>
-  </head>
-  <body>
-    <h1>Hola Mundo</h1>
-    <p>Sitio en construccion - Espacio Baume</p>
-  </body>
-  </html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Espacio Baume · Consultorios y espacio para la comunidad en General Belgrano</title>
+  <meta name="description" content="Una casa en General Belgrano con dos consultorios equipados para profesionales de la salud y un living multi-espacio para talleres y actividades para la comunidad.">
+  <meta name="theme-color" content="#fbf8f4">
+
+  <!-- Compartir en redes y WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Espacio Baume · General Belgrano">
+  <meta property="og:description" content="Consultorios para profesionales de la salud y un espacio para la comunidad. Acá también cuidamos a quienes cuidan.">
+  <meta property="og:image" content="assets/img/og-espacio-baume.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Petrona:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Espacio Baume",
+    "description": "Consultorios para profesionales de la salud y espacio multi-uso para talleres y actividades para la comunidad.",
+    "telephone": "+54 9 2243 46-2995",
+    "email": "baume.espacio@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "General Belgrano", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+    "sameAs": ["https://www.instagram.com/espacio.baume/"]
+  }
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Espacio Baume, ir al inicio">
+        <img src="assets/img/logo-espacio-baume.svg" alt="Espacio Baume" width="140" height="55">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+      <nav class="site-nav" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="#consultorios">Consultorios</a></li>
+          <li><a href="#comunidad">Comunidad</a></li>
+          <li><a href="#el-nombre">El nombre</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-primary btn-small" href="https://wa.me/5492243462995" data-wa="general">Escribinos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 id="hero-titulo">Una casa para cuidar y crecer en General Belgrano</h1>
+          <p class="lead">Dos consultorios pensados para profesionales de la salud y un living abierto a la comunidad, con talleres y actividades para chicos y familias.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5492243462995" data-wa="profesional">Consultar por un consultorio</a>
+            <a class="btn btn-secondary" href="#comunidad">Ver actividades</a>
+          </div>
+        </div>
+
+        <figure class="casa" aria-labelledby="casa-leyenda">
+          <!-- Los tres redondeles del logo son los tres espacios de la casa.
+               Cuando tengas fotos, podés ponerlas dentro de cada círculo (ver styles.css, "Fotos en los redondeles"). -->
+          <div class="casa-arbol" aria-hidden="true">
+            <span class="redondel redondel-salvia"></span>
+            <span class="redondel redondel-terracota"></span>
+            <span class="redondel redondel-arena"></span>
+          </div>
+          <figcaption id="casa-leyenda" class="casa-leyenda">
+            <span class="leyenda-item"><span class="punto punto-salvia" aria-hidden="true"></span>Consultorio</span>
+            <span class="leyenda-item"><span class="punto punto-terracota" aria-hidden="true"></span>Consultorio</span>
+            <span class="leyenda-item"><span class="punto punto-arena" aria-hidden="true"></span>Living multi-espacio</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONSULTORIOS -->
+    <section class="section section-arena" id="consultorios" aria-labelledby="consultorios-titulo">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="consultorios-titulo">Un espacio que te acompaña para que puedas seguir cuidando</h2>
+          <p>Consultorios equipados para psicólogos, psicopedagogas, fonoaudiólogos, nutricionistas y otros profesionales de la salud. Vos traés a tus pacientes; del resto nos ocupamos nosotros.</p>
+        </div>
+
+        <div class="servicios">
+          <article class="grupo">
+            <h3><span class="punto punto-terracota" aria-hidden="true"></span>Para tu jornada</h3>
+            <dl>
+              <dt>Coffee station</dt>
+              <dd>Café, té, mate, agua y todo lo que necesitás para recargar energías.</dd>
+              <dt>Un mimo al final del día</dt>
+              <dd>Llevate un chocolate para cerrar tu jornada con algo rico.</dd>
+              <dt>Kit de emergencia profesional</dt>
+              <dd>Notebook, cargadores, adaptadores y más, por si lo necesitás.</dd>
+            </dl>
+          </article>
+          <article class="grupo">
+            <h3><span class="punto punto-salvia" aria-hidden="true"></span>Para trabajar tranquilo</h3>
+            <dl>
+              <dt>Impresora disponible</dt>
+              <dd>Imprimí lo que necesitás cuando lo necesitás.</dd>
+              <dt>Internet de alta velocidad</dt>
+              <dd>Fibra óptica dedicada para que tus sesiones nunca se corten.</dd>
+              <dt>Luz de emergencia</dt>
+              <dd>Estamos preparados para que nada interrumpa tu trabajo.</dd>
+            </dl>
+          </article>
+          <article class="grupo">
+            <h3><span class="punto punto-arena-borde" aria-hidden="true"></span>Para tus pacientes</h3>
+            <dl>
+              <dt>WhatsApp de recepción</dt>
+              <dd>Un canal ágil para vos y tus pacientes.</dd>
+              <dt>Agenda visible</dt>
+              <dd>Pantalla en recepción para una organización profesional.</dd>
+              <dt>Aromas y música</dt>
+              <dd>Un ambiente agradable que ayuda a vos y a tus pacientes a estar mejor.</dd>
+            </dl>
+          </article>
+          <article class="grupo">
+            <h3><span class="punto punto-malva" aria-hidden="true"></span>Todo resuelto</h3>
+            <dl>
+              <dt>Lockers personales</dt>
+              <dd>Guardá tus cosas con seguridad.</dd>
+              <dt>Limpieza impecable</dt>
+              <dd>Un espacio siempre limpio, cuidado y acogedor.</dd>
+              <dt>Mantenimiento incluido</dt>
+              <dd>Nos ocupamos de todo para que vos solo te ocupes de tus pacientes.</dd>
+            </dl>
+          </article>
+        </div>
+
+        <div class="modalidades">
+          <div>
+            <h3>Alquilá como te quede cómodo</h3>
+            <p>Por hora, por módulo o con un día fijo mensual. Contanos qué necesitás y armamos la opción que mejor se adapte a tu agenda.</p>
+          </div>
+          <div class="bienvenida">
+            <h3>Te damos la bienvenida</h3>
+            <p>Cuando te sumás, te recibimos con un detalle especial para que te sientas en casa desde el primer día.</p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/5492243462995" data-wa="profesional">Consultar disponibilidad</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMUNIDAD -->
+    <section class="section" id="comunidad" aria-labelledby="comunidad-titulo">
+      <div class="container comunidad">
+        <div class="comunidad-text">
+          <h2 id="comunidad-titulo">El living es de la comunidad</h2>
+          <p>El living de la casa se transformó en un espacio para encontrarnos, aprender y compartir. Un lugar pensado especialmente para las infancias de General Belgrano y sus familias.</p>
+          <p class="nota">Estamos armando la primera agenda de actividades. Escribinos y te avisamos apenas esté lista.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5492243462995" data-wa="comunidad">Quiero enterarme de las actividades</a>
+            <a class="btn btn-secondary" href="https://wa.me/5492243462995" data-wa="tallerista">Proponer un taller</a>
+          </div>
+        </div>
+        <div class="comunidad-lista">
+          <h3>Lo que vas a encontrar</h3>
+          <ul class="propuestas">
+            <li>Talleres para chicos</li>
+            <li>Charlas y encuentros para familias</li>
+            <li>Grupos y actividades para adultos</li>
+            <li>Propuestas de profesionales y talleristas de la zona</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EL NOMBRE -->
+    <section class="section section-nombre" id="el-nombre" aria-labelledby="nombre-titulo">
+      <div class="container nombre">
+        <p class="nombre-palabra" lang="de" aria-hidden="true">Bäume</p>
+        <div>
+          <h2 id="nombre-titulo">Bäume significa árboles</h2>
+          <p>Elegimos un nombre en alemán porque habla de lo que queremos ser: un lugar para echar raíces, crecer y dar sombra. No un árbol solo, sino muchos creciendo juntos. Los tres redondeles de nuestro logo son los puntitos de la «ä» y, a la vez, la copa de un árbol.</p>
+          <p class="slogan">Acá también cuidamos a quienes cuidan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section-arena" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container contacto">
+        <h2 id="contacto-titulo">Vení a conocernos</h2>
+        <p>Coordinamos una visita para que recorras la casa sin compromiso.</p>
+        <ul class="canales">
+          <li>
+            <a class="canal" href="https://wa.me/5492243462995" data-wa="visita">
+              <span class="canal-nombre">WhatsApp</span>
+              <span class="canal-dato">2243 46-2995</span>
+            </a>
+          </li>
+          <li>
+            <a class="canal" href="https://www.instagram.com/espacio.baume/" rel="noopener" target="_blank">
+              <span class="canal-nombre">Instagram</span>
+              <span class="canal-dato">@espacio.baume</span>
+            </a>
+          </li>
+          <li>
+            <a class="canal" href="mailto:baume.espacio@gmail.com">
+              <span class="canal-nombre">Mail</span>
+              <span class="canal-dato">baume.espacio@gmail.com</span>
+            </a>
+          </li>
+        </ul>
+        <p class="ubicacion">General Belgrano, provincia de Buenos Aires</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/img/logo-espacio-baume-negativo.svg" alt="Espacio Baume" width="160" height="63">
+      <p>Más que un consultorio, un lugar para crecer y sentirse bien.</p>
+      <p class="footer-legal">© <span data-year>2026</span> Espacio Baume · General Belgrano</p>
+    </div>
+  </footer>
+</body>
+</html>
