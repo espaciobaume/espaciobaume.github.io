@@ -215,12 +215,34 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 .redondel-arena     { background-image: url("../assets/img/living.jpg"); }
 */
 
-.casa-leyenda {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: var(--space-1) var(--space-3);
-  margin-top: var(--space-3);
-  font-size: 14px;
+.redondel {
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
 }
+.redondel-etiqueta {
+  background: var(--crema);
+  color: var(--tinta);
+  font-size: clamp(13px, 1.3vw, 15px);
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(91, 74, 73, .12);
+  text-align: center;
+}
+/* las etiquetas de abajo se corren hacia afuera para no taparse con el círculo de arriba */
+.redondel-salvia .redondel-etiqueta { transform: translate(-8%, 22%); }
+.redondel-terracota .redondel-etiqueta { transform: translate(8%, 22%); }
+.redondel-arena { z-index: 1; }
+.redondel-arena .redondel-etiqueta { transform: translateY(-18%); background: var(--blanco); }
+.redondel:hover .redondel-etiqueta { background: var(--blanco); }
+
+.casa-leyenda {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: 15px;
+}
+.casa-leyenda strong { color: var(--tinta); }
 .leyenda-item { display: inline-flex; align-items: center; gap: var(--space-1); }
 
 /* Único momento animado: el árbol se arma al cargar la página */
@@ -240,6 +262,34 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 .section-arena { background: var(--arena); }
 .section-head { max-width: 720px; margin-bottom: var(--space-5); }
 .section-head p { font-size: 1.1rem; }
+
+/* Los dos consultorios */
+.dos-consultorios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+.consultorio {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--crema);
+  border-radius: var(--radius-md);
+}
+.consultorio h3 { font-size: 1.6rem; color: var(--malva); font-weight: 400; margin-bottom: 4px; }
+.consultorio p { margin: 0; font-size: 15px; }
+.consultorio-numero {
+  flex: none;
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-size: 2.4rem; line-height: 1;
+  color: var(--crema);
+}
+.consultorio-1 .consultorio-numero { background: var(--salvia-profunda); }
+.consultorio-2 .consultorio-numero { background: var(--terracota-profunda); }
+.dos-consultorios-nota { grid-column: 1 / -1; margin: 0; font-size: 1.05rem; }
 
 /* Servicios para profesionales */
 .servicios {
@@ -273,6 +323,31 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 .modalidades h3 { font-size: 1.25rem; }
 
 /* Disponibilidad (calendario de Google) */
+.calendario-controles {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+.calendario-tabs { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.tab {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  min-height: 44px; padding: 8px 18px;
+  border: 0; border-radius: var(--radius-full);
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--tinta);
+  color: var(--tinta);
+  font: 500 15px/1.2 var(--font-sans);
+  cursor: pointer;
+}
+.tab:hover { background: var(--arena); }
+.tab.is-active { background: var(--tinta); color: var(--crema); }
+.calendario-leyenda { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin: 0; font-size: 14px; }
+.leyenda-item { display: inline-flex; align-items: center; gap: var(--space-1); }
+.leyenda-item[hidden] { display: none; }
+/* mismos colores que usa Google en el calendario (Salvia y Flamingo) */
+.punto-cal1 { background: #33b679; }
+.punto-cal2 { background: #e67c73; }
+
 .calendario {
   background: var(--blanco);
   border-radius: var(--radius-md);
@@ -282,7 +357,7 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 .calendario-frame {
   display: block;
   width: 100%;
-  height: 620px;
+  height: 680px;
   border: 0;
   border-radius: var(--radius-sm);
 }
@@ -412,7 +487,9 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
   .casa { max-width: 480px; width: 100%; justify-self: center; }
   .canales { grid-template-columns: 1fr; }
   .calendario { padding: var(--space-1); }
-  .calendario-frame { height: 540px; }
+  .calendario-frame { height: 560px !important; }
+  .dos-consultorios { grid-template-columns: 1fr; }
+  .consultorio { padding: var(--space-3); }
 }
 
 @media (max-width: 560px) {

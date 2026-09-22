@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Petrona:wght@400;500&display=swap">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
 
   <script type="application/ld+json">
   {
@@ -34,7 +34,7 @@
     "sameAs": ["https://www.instagram.com/espacio.baume/"]
   }
   </script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -68,7 +68,7 @@
       <div class="container hero-inner">
         <div class="hero-text">
           <h1 id="hero-titulo">Una casa para cuidar y crecer en General Belgrano</h1>
-          <p class="lead">Dos consultorios pensados para profesionales de la salud y un living abierto a la comunidad, con talleres y actividades para chicos y familias.</p>
+          <p class="lead"><strong>Dos consultorios independientes</strong> para profesionales de la salud y un living abierto a la comunidad, con talleres y actividades para chicos y familias.</p>
           <div class="actions">
             <a class="btn btn-primary" href="https://wa.me/5492243462995" data-wa="profesional">Consultar por un consultorio</a>
             <a class="btn btn-secondary" href="#comunidad">Ver actividades</a>
@@ -78,16 +78,12 @@
         <figure class="casa" aria-labelledby="casa-leyenda">
           <!-- Los tres redondeles del logo son los tres espacios de la casa.
                Cuando tengas fotos, podés ponerlas dentro de cada círculo (ver styles.css, "Fotos en los redondeles"). -->
-          <div class="casa-arbol" aria-hidden="true">
-            <span class="redondel redondel-salvia"></span>
-            <span class="redondel redondel-terracota"></span>
-            <span class="redondel redondel-arena"></span>
+          <div class="casa-arbol">
+            <a class="redondel redondel-salvia" href="#consultorios"><span class="redondel-etiqueta">Consultorio 1</span></a>
+            <a class="redondel redondel-terracota" href="#consultorios"><span class="redondel-etiqueta">Consultorio 2</span></a>
+            <a class="redondel redondel-arena" href="#comunidad"><span class="redondel-etiqueta">Living multi-espacio</span></a>
           </div>
-          <figcaption id="casa-leyenda" class="casa-leyenda">
-            <span class="leyenda-item"><span class="punto punto-salvia" aria-hidden="true"></span>Consultorio</span>
-            <span class="leyenda-item"><span class="punto punto-terracota" aria-hidden="true"></span>Consultorio</span>
-            <span class="leyenda-item"><span class="punto punto-arena" aria-hidden="true"></span>Living multi-espacio</span>
-          </figcaption>
+          <figcaption id="casa-leyenda" class="casa-leyenda">Una casa, tres espacios: <strong>2 consultorios</strong> y 1 living para la comunidad.</figcaption>
         </figure>
       </div>
     </section>
@@ -98,6 +94,25 @@
         <div class="section-head">
           <h2 id="consultorios-titulo">Un espacio que te acompaña para que puedas seguir cuidando</h2>
           <p>Consultorios equipados para psicólogos, psicopedagogas, fonoaudiólogos, nutricionistas y otros profesionales de la salud. Vos traés a tus pacientes; del resto nos ocupamos nosotros.</p>
+        </div>
+
+        <!-- Cuando quieras, sumá en cada tarjeta el detalle real: metros, mobiliario (diván, escritorio, camilla), luz natural, etc. -->
+        <div class="dos-consultorios">
+          <article class="consultorio consultorio-1">
+            <span class="consultorio-numero" aria-hidden="true">1</span>
+            <div>
+              <h3>Consultorio 1</h3>
+              <p>Privado, equipado y listo para atender.</p>
+            </div>
+          </article>
+          <article class="consultorio consultorio-2">
+            <span class="consultorio-numero" aria-hidden="true">2</span>
+            <div>
+              <h3>Consultorio 2</h3>
+              <p>Privado, equipado y listo para atender.</p>
+            </div>
+          </article>
+          <p class="dos-consultorios-nota">Dos consultorios independientes en la misma casa: podés alquilar uno o los dos, y compartir los servicios que siguen.</p>
         </div>
 
         <div class="servicios">
@@ -165,19 +180,33 @@
     <section class="section" id="disponibilidad" aria-labelledby="disponibilidad-titulo">
       <div class="container">
         <div class="section-head">
-          <h2 id="disponibilidad-titulo">Disponibilidad de consultorios</h2>
-          <p>Los bloques de color son horarios ocupados; los espacios en blanco están libres. Elegí el día y el horario que te sirven y escribinos para reservarlo.</p>
+          <h2 id="disponibilidad-titulo">Disponibilidad de los 2 consultorios</h2>
+          <p>Elegí qué consultorio querés ver. Los bloques de color son horarios ocupados; los espacios en blanco están libres. Encontrá el día y el horario que te sirven y escribinos para reservarlo.</p>
         </div>
-        <div class="calendario">
+        <div class="calendario-controles">
+          <div class="calendario-tabs" role="group" aria-label="Elegí qué consultorio ver">
+            <button type="button" class="tab is-active" data-ver="ambos" aria-pressed="true">Los 2 consultorios</button>
+            <button type="button" class="tab" data-ver="1" aria-pressed="false"><span class="punto punto-cal1" aria-hidden="true"></span>Consultorio 1</button>
+            <button type="button" class="tab" data-ver="2" aria-pressed="false"><span class="punto punto-cal2" aria-hidden="true"></span>Consultorio 2</button>
+          </div>
+          <p class="calendario-leyenda" aria-live="polite">
+            <span class="leyenda-item"><span class="punto punto-cal1" aria-hidden="true"></span>Ocupado en Consultorio 1</span>
+            <span class="leyenda-item"><span class="punto punto-cal2" aria-hidden="true"></span>Ocupado en Consultorio 2</span>
+          </p>
+        </div>
+        <div class="calendario"
+             data-cal-1="MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+             data-cal-2="MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
           <iframe
             class="calendario-frame"
-            src="https://calendar.google.com/calendar/embed?height=600&amp;hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;mode=WEEK&amp;src=MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2333B679&amp;color=%23E67C73"
-            data-src-week="https://calendar.google.com/calendar/embed?height=600&amp;hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;mode=WEEK&amp;src=MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2333B679&amp;color=%23E67C73"
-            title="Calendario de disponibilidad de los dos consultorios de Espacio Baume"
+            src="https://calendar.google.com/calendar/embed?hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;src=MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2333B679&amp;color=%23E67C73"
+            width="100%" height="680"
+            style="border:0;width:100%;height:680px"
+            title="Calendario de disponibilidad de los consultorios de Espacio Baume"
             loading="lazy"></iframe>
         </div>
         <div class="calendario-pie">
-          <p>Para ver otras semanas usá las flechas del calendario. Los horarios se muestran en hora de Argentina.</p>
+          <p>Usá las flechas para ver otras semanas. En la computadora ves la semana completa; en el celular, la lista de horarios ocupados.</p>
           <a class="btn btn-primary" href="https://wa.me/5492243462995" data-wa="reserva">Quiero reservar un horario</a>
         </div>
       </div>
