@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Petrona:wght@400;500&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 
   <script type="application/ld+json">
   {
@@ -34,7 +34,7 @@
     "sameAs": ["https://www.instagram.com/espacio.baume/"]
   }
   </script>
-  <script src="js/main.js?v=3" defer></script>
+  <script src="js/main.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -181,34 +181,41 @@
       <div class="container">
         <div class="section-head">
           <h2 id="disponibilidad-titulo">Disponibilidad de los 2 consultorios</h2>
-          <p>Elegí qué consultorio querés ver. Los bloques de color son horarios ocupados; los espacios en blanco están libres. Encontrá el día y el horario que te sirven y escribinos para reservarlo.</p>
+          <p>Cada consultorio tiene su propio calendario. Los bloques de color son horarios ocupados y los espacios en blanco, libres. Encontrá el día y el horario que te sirven y tocá «Reservar»: nos llega tu pedido por WhatsApp y te lo confirmamos.</p>
         </div>
-        <div class="calendario-controles">
-          <div class="calendario-tabs" role="group" aria-label="Elegí qué consultorio ver">
-            <button type="button" class="tab is-active" data-ver="ambos" aria-pressed="true">Los 2 consultorios</button>
-            <button type="button" class="tab" data-ver="1" aria-pressed="false"><span class="punto punto-cal1" aria-hidden="true"></span>Consultorio 1</button>
-            <button type="button" class="tab" data-ver="2" aria-pressed="false"><span class="punto punto-cal2" aria-hidden="true"></span>Consultorio 2</button>
-          </div>
-          <p class="calendario-leyenda" aria-live="polite">
-            <span class="leyenda-item"><span class="punto punto-cal1" aria-hidden="true"></span>Ocupado en Consultorio 1</span>
-            <span class="leyenda-item"><span class="punto punto-cal2" aria-hidden="true"></span>Ocupado en Consultorio 2</span>
-          </p>
+        <div class="agendas">
+          <article class="agenda agenda-1" aria-labelledby="agenda-1-titulo">
+            <header class="agenda-head">
+              <span class="consultorio-numero consultorio-numero-chico" aria-hidden="true">1</span>
+              <h3 id="agenda-1-titulo">Consultorio 1</h3>
+              <a class="btn btn-primary btn-small" href="https://wa.me/5492243462995" data-wa="reserva1">Reservar Consultorio 1</a>
+            </header>
+            <iframe
+              class="calendario-frame"
+              src="https://calendar.google.com/calendar/embed?hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;src=MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2333B679"
+              data-src="https://calendar.google.com/calendar/embed?hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;src=MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2333B679"
+              width="100%" height="560"
+              style="border:0;width:100%;height:560px"
+              title="Horarios ocupados del Consultorio 1"
+              loading="lazy"></iframe>
+          </article>
+          <article class="agenda agenda-2" aria-labelledby="agenda-2-titulo">
+            <header class="agenda-head">
+              <span class="consultorio-numero consultorio-numero-chico" aria-hidden="true">2</span>
+              <h3 id="agenda-2-titulo">Consultorio 2</h3>
+              <a class="btn btn-primary btn-small" href="https://wa.me/5492243462995" data-wa="reserva2">Reservar Consultorio 2</a>
+            </header>
+            <iframe
+              class="calendario-frame"
+              src="https://calendar.google.com/calendar/embed?hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;src=MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23E67C73"
+              data-src="https://calendar.google.com/calendar/embed?hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;src=MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23E67C73"
+              width="100%" height="560"
+              style="border:0;width:100%;height:560px"
+              title="Horarios ocupados del Consultorio 2"
+              loading="lazy"></iframe>
+          </article>
         </div>
-        <div class="calendario"
-             data-cal-1="MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-             data-cal-2="MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
-          <iframe
-            class="calendario-frame"
-            src="https://calendar.google.com/calendar/embed?hl=es&amp;wkst=2&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;src=MWVhODJjM2JmZDFmY2M3Y2ZmZGNkNmFhYjRjNTdmZmZmMzIzMWY3YWIwMDBhMmMxODQ1ZmE0ZDRkMjczYmE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=MTU2YzAzZGFlNThiZDdhYzkwNmIzNmRkMTcxZDRmMDYyMGFmNmZiNmY5NWJkNjA0NzM3OGI0NTZlMDgyZTFmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2333B679&amp;color=%23E67C73"
-            width="100%" height="680"
-            style="border:0;width:100%;height:680px"
-            title="Calendario de disponibilidad de los consultorios de Espacio Baume"
-            loading="lazy"></iframe>
-        </div>
-        <div class="calendario-pie">
-          <p>Usá las flechas para ver otras semanas. En la computadora ves la semana completa; en el celular, la lista de horarios ocupados.</p>
-          <a class="btn btn-primary" href="https://wa.me/5492243462995" data-wa="reserva">Quiero reservar un horario</a>
-        </div>
+        <p class="calendario-pie">Usá las flechas de cada calendario para ver otras semanas. En el celular se muestra la lista de horarios ocupados.</p>
       </div>
     </section>
 

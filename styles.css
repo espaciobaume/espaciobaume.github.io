@@ -322,51 +322,32 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 .modalidades p { margin-bottom: 0; font-size: 15px; }
 .modalidades h3 { font-size: 1.25rem; }
 
-/* Disponibilidad (calendario de Google) */
-.calendario-controles {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-  gap: var(--space-2);
-  margin-bottom: var(--space-2);
-}
-.calendario-tabs { display: flex; flex-wrap: wrap; gap: var(--space-1); }
-.tab {
-  display: inline-flex; align-items: center; gap: var(--space-1);
-  min-height: 44px; padding: 8px 18px;
-  border: 0; border-radius: var(--radius-full);
-  background: transparent;
-  box-shadow: inset 0 0 0 1.5px var(--tinta);
-  color: var(--tinta);
-  font: 500 15px/1.2 var(--font-sans);
-  cursor: pointer;
-}
-.tab:hover { background: var(--arena); }
-.tab.is-active { background: var(--tinta); color: var(--crema); }
-.calendario-leyenda { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin: 0; font-size: 14px; }
-.leyenda-item { display: inline-flex; align-items: center; gap: var(--space-1); }
-.leyenda-item[hidden] { display: none; }
-/* mismos colores que usa Google en el calendario (Salvia y Flamingo) */
-.punto-cal1 { background: #33b679; }
-.punto-cal2 { background: #e67c73; }
-
-.calendario {
+/* Disponibilidad: un calendario por consultorio */
+.agendas { display: grid; gap: var(--space-4); }
+.agenda {
   background: var(--blanco);
   border-radius: var(--radius-md);
-  padding: var(--space-2);
+  padding: var(--space-3);
   box-shadow: inset 0 0 0 1px rgba(91, 74, 73, .15);
 }
+.agenda-1 { box-shadow: inset 0 0 0 1px rgba(91, 74, 73, .15), inset 0 6px 0 var(--salvia); }
+.agenda-2 { box-shadow: inset 0 0 0 1px rgba(91, 74, 73, .15), inset 0 6px 0 var(--terracota); }
+.agenda-head {
+  display: flex; align-items: center; gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+.agenda-head h3 { margin: 0; font-size: 1.6rem; font-weight: 400; color: var(--malva); flex: 1; }
+.consultorio-numero-chico { width: 48px !important; height: 48px !important; font-size: 1.6rem !important; }
+.agenda-1 .consultorio-numero { background: var(--salvia-profunda); }
+.agenda-2 .consultorio-numero { background: var(--terracota-profunda); }
 .calendario-frame {
   display: block;
   width: 100%;
-  height: 680px;
+  height: 560px;
   border: 0;
   border-radius: var(--radius-sm);
 }
-.calendario-pie {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-  gap: var(--space-2) var(--space-4);
-  margin-top: var(--space-3);
-}
-.calendario-pie p { margin: 0; font-size: 15px; }
+.calendario-pie { margin-top: var(--space-3); font-size: 15px; }
 
 /* Comunidad */
 .comunidad {
@@ -486,8 +467,10 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
   .nombre { grid-template-columns: 1fr; }
   .casa { max-width: 480px; width: 100%; justify-self: center; }
   .canales { grid-template-columns: 1fr; }
-  .calendario { padding: var(--space-1); }
-  .calendario-frame { height: 560px !important; }
+  .agenda { padding: var(--space-2); }
+  .agenda-head { flex-wrap: wrap; }
+  .agenda-head .btn { width: 100%; }
+  .calendario-frame { height: 480px !important; }
   .dos-consultorios { grid-template-columns: 1fr; }
   .consultorio { padding: var(--space-3); }
 }
