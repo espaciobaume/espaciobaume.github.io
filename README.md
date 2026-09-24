@@ -6,14 +6,19 @@ Sitio estático en HTML5, CSS y JavaScript, sin dependencias ni proceso de compi
 
 ## Estructura
 
+Todos los archivos van sueltos en la carpeta principal del repositorio, sin subcarpetas:
+
 ```
-index.html          Contenido de la página
-css/styles.css      Estilos (colores y tipografías del manual de marca)
-js/main.js          Menú en celulares y links de WhatsApp con mensaje precargado
-assets/img/         Logos y la imagen que se ve al compartir el link
-favicon.svg         Ícono de la pestaña (isotipo)
-apple-touch-icon.png
+index.html                     Contenido de la página
+styles.css                     Estilos
+main.js                        Menú en celulares, links de WhatsApp y calendarios
+logo-espacio-baume.svg         Logo
+logo-espacio-baume-negativo.svg Logo para fondo malva (pie)
+og-espacio-baume.png           Imagen al compartir el link
+favicon.svg / apple-touch-icon.png  Íconos
 ```
+
+Cuando cambies el CSS o el JS, subí el número de versión en index.html (`styles.css?v=7` → `?v=8`) para que los navegadores bajen el archivo nuevo.
 
 ## Publicar en GitHub Pages
 
@@ -26,6 +31,6 @@ Para usar un dominio propio (por ejemplo `espaciobaume.com.ar`), cargalo en **Se
 ## Cambios frecuentes
 
 - **Número de WhatsApp y mensajes precargados:** al principio de `js/main.js`.
-- **Fotos de la casa:** guardalas en `assets/img/` y descomentá el bloque *"Fotos en los redondeles"* en `css/styles.css`.
-- **Imagen al compartir:** cuando el sitio tenga su dirección definitiva, cambiá `og:image` en `index.html` por la URL completa (por ejemplo `https://espaciobaume.com.ar/assets/img/og-espacio-baume.png`) para que WhatsApp la muestre siempre.
+- **Fotos de la casa:** guardalas en la carpeta principal y descomentá el bloque *"Fotos en los redondeles"* en `css/styles.css`.
+- **Imagen al compartir:** cuando el sitio tenga su dirección definitiva, cambiá `og:image` en `index.html` por la URL completa (por ejemplo `https://espaciobaume.github.io/og-espacio-baume.png`) para que WhatsApp la muestre siempre.
 - **Colores y tipografías:** variables al principio de `css/styles.css`.

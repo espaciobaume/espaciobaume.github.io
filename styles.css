@@ -149,7 +149,7 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
   display: flex; align-items: center; justify-content: space-between;
   min-height: 80px; gap: var(--space-3);
 }
-.brand img { width: 128px; height: auto; }
+.brand img { width: 156px; height: auto; }
 
 .site-nav { display: flex; align-items: center; gap: var(--space-4); }
 .site-nav ul { display: flex; gap: var(--space-3); list-style: none; margin: 0; padding: 0; }
@@ -210,9 +210,9 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 .redondel-arena     { background-color: var(--arena);     width: 47.5%;  left: 25.6%;  top: 0; }
 
 /* Fotos en los redondeles: cuando tengas fotos de la casa, descomentá y cambiá las rutas.
-.redondel-salvia    { background-image: url("../assets/img/consultorio-1.jpg"); }
-.redondel-terracota { background-image: url("../assets/img/consultorio-2.jpg"); }
-.redondel-arena     { background-image: url("../assets/img/living.jpg"); }
+.redondel-salvia    { background-image: url("consultorio-1.jpg"); }
+.redondel-terracota { background-image: url("consultorio-2.jpg"); }
+.redondel-arena     { background-image: url("living.jpg"); }
 */
 
 .redondel {
@@ -434,7 +434,7 @@ a { color: var(--salvia-profunda); text-underline-offset: 3px; }
 /* Footer */
 .site-footer { background: var(--malva); color: var(--crema); padding-block: var(--space-5); }
 .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-2); }
-.footer-inner img { width: 150px; margin-bottom: var(--space-1); }
+.footer-inner img { width: 180px; margin-bottom: var(--space-1); }
 .site-footer p { margin: 0; }
 .footer-legal { font-size: 14px; opacity: .9; }
 
